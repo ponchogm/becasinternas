@@ -16,6 +16,7 @@
       <script src="js/funcionesalumno.js"></script>
 </head>
 <body>
+	
     <?php include "cabecera.php"; ?>
 	<div class="container" style="margin-top:10px">
 		<h2 class="sub-header">Alumnos Becas Internas</h2>
