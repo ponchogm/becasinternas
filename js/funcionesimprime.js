@@ -22,12 +22,15 @@
                    }
                     console.log(data.datos.alumbeca_rut);
                     console.log(data.datos.alumbeca_nombres+" "+data.datos.alumbeca_apepat+" "+data.datos.alumbeca_apemat);
+                    //$('#msg-form').html("<b>Rut: </b>"+data.datos.alumbeca_rut);
+                    //$('#legend1').hide(); //oculto mediante id
                     $('#rut').html("<b>Rut: </b>"+data.datos.alumbeca_rut);
                     $('#nombre').html("<b>Nombre: </b>"+data.datos.alumbeca_nombres+" "+data.datos.alumbeca_apepat+" "+data.datos.alumbeca_apemat);
                     $('#fecha').html("<b>Fecha de Postulación: </b>"+data.datos.alumbeca_fecha_postula);
                     $('#correo').html("<b>Correo: </b>"+data.datos.alumbeca_correo);
                     $('#telefono').html("<b>Teléfono: </b>"+data.datos.alumbeca_fono);
-                    $('#carrera').html("<b>Carrera: </b>"+data.datos.alumbeca_nombrecarr);
+                    //$('#carrera').html("<b>Carrera: </b>"+data.datos.alumbeca_nombrecarr);
+                    $('#carrera').html("<b>Carrera: </b>"+data.datos.alumbeca_codigocarr);
                     $('#beca').html("<b>Beca a la que postula: </b>"+data.datos.alumbeca_postulabeca);
             })
             .fail(function( jqXHR, textStatus, errorThrown ) {

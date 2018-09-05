@@ -33,6 +33,9 @@ include ('seguridad3.php');
 
     <script type="text/javascript">
       function printDiv(imprimir) {
+       document.getElementById('legend1').style.display = 'none'; 
+       document.getElementById('msg-form').style.display = 'none';
+       document.getElementById('legend2').style.display = 'block';
        var contenido= document.getElementById(imprimir).innerHTML;
        var contenidoOriginal= document.body.innerHTML;
 
@@ -77,9 +80,9 @@ include ('seguridad3.php');
       <p>
       <div class="row-fluid">
       </br>
-        <div span style="color:red"><center><h7><strong>Tu postulación NO HA CONCLUIDO.</strong></h7></center></div>
+        <div span style="color:red" id="msg-form"><center><h7><strong>Tu postulación NO HA CONCLUIDO.</strong></h7></center></div>
         <p>
-        <div>
+        <div id="legend1">
         <p>
         <p>
           <ul>
@@ -90,7 +93,8 @@ include ('seguridad3.php');
         
         </ul>
       </div>
-
+      <div id="legend2" style='display:none;'><center><h7><strong>Datos de Postulación</strong></h7></center></div>
+      <p>
       <p>
       <p>
         <table class="table table-striped table-bordered">
