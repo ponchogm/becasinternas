@@ -28,22 +28,24 @@ include ('seguridad3.php');
         var rut0='<?php echo $_SESSION["rut"]; ?>';
     </script>
     <script src="js/funcionesimprime.js"></script>
-    
-  </head>
 
     <script type="text/javascript">
+      $(document).ready(function(){ 
+         document.getElementById("logo").style.display = 'none'; 
+      });
       function printDiv(imprimir) {
-       document.getElementById('legend1').style.display = 'none'; 
+       /*document.getElementById('legend1').style.display = 'none'; 
        document.getElementById('msg-form').style.display = 'none';
-       document.getElementById('legend2').style.display = 'block';
+       document.getElementById('legend2').style.display = 'block';*/
+       document.getElementById("logo").style.display = 'block';
        var contenido= document.getElementById(imprimir).innerHTML;
        var contenidoOriginal= document.body.innerHTML;
-
        document.body.innerHTML = contenido;
 
        window.print();
 
        document.body.innerHTML = contenidoOriginal;
+       document.getElementById("logo").style.display = 'none';
       }
     </script>
 
@@ -75,7 +77,7 @@ include ('seguridad3.php');
 
       <!-- Cabecera del formulario -->
       <div id="form">
-
+        <div id="logo"><center><img src="img/templates/logo_umce_2018_290.jpg" class="img-rounded"></center></div>
       <p>
       <p>
       <div class="row-fluid">
@@ -86,7 +88,7 @@ include ('seguridad3.php');
         <p>
         <p>
           <ul>
-        Debes imprimir este formulario y presentarlo en Bienestar Estudiantil, junto a:
+        Para terminar tu postulación debes incluír la siguiente documentación:
         <li>Fotocopia de tu cédula de identidad vigente</li>
         
         <li>Cartola de Registro Social de Hogares.</li>
